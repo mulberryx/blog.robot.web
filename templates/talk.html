@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+        <title>白昼之光</title>
+        {% include "common/head.php" %}
+        {% if env == 'develop' %}
+            <link href="http://localhost:8001/styles/talker.css" rel="stylesheet" />
+        {% else %}
+            <link href="http://localhost:8001/styles/talker.css" rel="stylesheet" />
+        {% endif %}
+    </head>
+    <body>
+        <div class="panel panel-default">
+            <div class="panel-heading">Philip</div>
+            <div class="panel-body">
+                <div id="talk-content" class="talk-content">
+                    <div class="msg-row">
+                        <div class="msg msg-me">很高兴遇见你</div>
+                    </div>
+                </div>
+                <div class="user-input-area">
+                    <input id="user-input" type="text" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        {% include "common/foot.php" %}
+        {% if env == 'develop' %}
+            <script type="text/javascript" src="http://localhost:8001/scripts/talker.js"></script>
+        {% else %}
+            <script type="text/javascript" src="http://localhost:8001/scripts/talker.js"></script>
+        {% endif %}
+    </body>
+</html>

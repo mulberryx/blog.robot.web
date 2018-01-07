@@ -1,0 +1,84 @@
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #8dbee0;
+}
+
+.panel {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 380px;
+    height: 80%;
+    margin: 0 auto;
+
+    .panel-heading {
+        background: #fff;
+    }
+
+    .talk-content {
+        position: absolute;
+        top: 41px;
+        left: 0;
+        bottom: 50px;
+        margin: 0;
+        padding-bottom: 35px;
+        width: 100%;
+        background: #c6e7fd;
+        box-shadow: inset 0px 0px 25px #216da2;
+        overflow: auto;
+    }
+
+    .user-input-area {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 48px;
+        background: #fff;
+
+        .form-control {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: 0px;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            height: auto;
+        }
+    }
+
+    .msg-row {
+        margin-top: 25px;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .msg {
+            padding: 12px 20px;
+            box-shadow: 1px 1px 4px #8dbee0;
+
+            &.msg-me {
+                margin-left: 25px;
+                border-radius: 0 20px 20px 20px;
+                float: left;
+                background: #fff;
+            }
+
+            &.msg-user {
+                margin-right: 25px;
+                border-radius: 20px 20px 0 20px;
+                float: right;
+                background: #fff;
+            }
+        }
+    }
+}

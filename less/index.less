@@ -1,0 +1,62 @@
+@import './common/portrait';
+@import './common/weather';
+
+* {
+    margin: 0;
+}
+
+.self-introduction {
+    position: absolute;
+    top: 565px;
+    width: 45%;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    color: #f4e9e5;
+    font-size: 14px;
+
+    &.opposite {
+        position: absolute;
+        top: 565px;
+        width: 45%;
+        left: 0;
+        right: 0;
+        margin: auto; 
+        color: #fff;
+        font-size: 16px;
+        display: none;
+    }
+
+    .form-group {
+        margin-top: 6px;
+
+        h4 {
+            font-size: 18px;
+        }
+    }
+}
+
+.button {
+    position: absolute;
+    padding: 10px 25px;
+    top: 25px;
+    right: 25px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    
+    &.button-talk {
+        color: #fff;
+        background: #333;
+
+        &:hover {
+            background: #232323;
+        }
+
+        &:active {
+            background: #131313;
+        }
+    }
+}

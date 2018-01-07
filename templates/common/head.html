@@ -1,0 +1,10 @@
+<!-- 加载进度条 -->
+{% if env == 'develop' %}
+    <link type="text/css" rel="stylesheet" href="http://localhost:8001/libs/pace/pace.css">
+    <script type="text/javascript" src="http://localhost:8001/libs/pace/pace.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://localhost:8001/libs/bootstrap/dist/css/bootstrap.min.css"/>
+{% else %}
+    <link type="text/css" rel="stylesheet" href="http://localhost:8001/libs/pace/pace.css">
+    <script type="text/javascript" src="http://localhost:8001/libs/pace/pace.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://localhost:8001/libs/bootstrap/dist/css/bootstrap.min.css"/>
+{% endif %}
