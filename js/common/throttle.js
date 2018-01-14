@@ -12,42 +12,42 @@
 * @return { function } 实际调用函数
 */
 var throttle = module.exports.throttle = function (fn, delay, immediate, debounce, flow) {
-   var curr = +new Date(),  //当前事件
-       last_call = 0,
-       last_exec = 0,
-       timer = null,
-       diff,                //时间差
-       context,             //上下文
-       args,
-       exec = function () {
-           last_exec = curr;
-           fn.apply(context, args);
-       };
+  var curr = +new Date(),  //当前事件
+     last_call = 0,
+     last_exec = 0,
+     timer = null,
+     diff,                //时间差
+     context,             //上下文
+     args,
+     exec = function () {
+         last_exec = curr;
+         fn.apply(context, args);
+     };
 
-   return function () {
-       curr= +new Date();
-       context = this,
-       args = arguments,
-       diff = curr - (debounce ? last_call : last_exec) - delay;
+  return function () {
+     curr= +new Date();
+     context = this,
+     args = arguments,
+     diff = curr - (debounce ? last_call : last_exec) - delay;
 
-       clearTimeout(timer);
+     clearTimeout(timer);
 
-       if (debounce) {
-           if (immediate) {
-                timer = setTimeout(exec, delay);
-           } else if (diff >= 0) {
-                exec();
-                last_call = curr;
-           }
-       } else {
-            if (diff >= 0) {
-                exec();
-                last_call = curr;
-            } else if (immediate) {
-                timer = setTimeout(exec, -diff);
-            }
-       }
-   }
+     if (debounce) {
+         if (immediate) {
+              timer = setTimeout(exec, delay);
+         } else if (diff >= 0) {
+              exec();
+              last_call = curr;
+         }
+     } else {
+          if (diff >= 0) {
+            exec();
+            last_call = curr;
+          } else if (immediate) {
+            timer = setTimeout(exec, -diff);
+          }
+     }
+  }
 };
  
 /*
@@ -58,5 +58,5 @@ var throttle = module.exports.throttle = function (fn, delay, immediate, debounc
 * @return { function } 实际调用函数
 */
 var debounce = module.exports.debounce = function (fn, delay, immediate) {
-   return throttle(fn, delay, immediate, true, true);
+  return throttle(fn, delay, immediate, true, true);
 };
