@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
     <title>白昼之光</title>
+    <link type="text/css" rel="stylesheet" href="http://ocgkyeaew.bkt.clouddn.com/libs/pace/pace.css">
+    <script type="text/javascript" src="http://ocgkyeaew.bkt.clouddn.com/libs/pace/pace.min.js"></script>
     {% if env == 'develop' %}
-      <link type="text/css" rel="stylesheet" href="http://localhost:8001/libs/pace/pace.css">
-      <script type="text/javascript" src="http://localhost:8001/libs/pace/pace.min.js"></script>
-      <link href="http://localhost:8001/styles/index.css" rel="stylesheet" />
+      <link href="http://localhost:8080/css/index.css" rel="stylesheet" />
     {% else %}
-      <link type="text/css" rel="stylesheet" href="http://localhost:8001/libs/pace/pace.css">
-      <script type="text/javascript" src="http://localhost:8001/libs/pace/pace.min.js"></script>
-      <link href="http://localhost:8001/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-      <link href="http://localhost:8001/styles/index.css" rel="stylesheet" />
+      <link href="http://localhost:8080/css/index.css" rel="stylesheet" />
     {% endif %}
   </head>
   <body>
@@ -81,35 +78,13 @@
         <span>Web全栈开发，热爱技术，热情开朗。喜欢思考哲学问题，信仰理性和意志。</span>
       </div>
     </div>
-    <div class="self-introduction opposite">
-      <div class="form-group">
-        <h4>Mulberry</h4>
-      </div>        
-      <div class="form-group">
-        <label>称号：</label>
-        <span>意志</span>
-      </div>
-      <div class="form-group">
-        <label>伙伴：</label>
-        <span>幽灵鸟</span>
-      </div>
-      <div class="form-group">
-        <label>技能：</label>
-        <span>预见，闪电反射，幽灵鸟召唤，意志之怒</span>
-      </div>
-      <div class="form-group">
-        <label>自我简介：</label>
-        <span>经受了无尽的苦痛与挣扎，意志骑士终于诞生了。他坚信理性与意志是唯一救赎之路。</span>
-      </div>
-    </div>
     <!-- <button id="goto-talk" class="button button-talk">和我聊天吧</button> -->
     <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript" src="http://ocgkyeaew.bkt.clouddn.com/libs/jquery/dist/jquery.min.js"></script>
     {% if env == 'develop' %}
-      <script type="text/javascript" src="http://localhost:8001/libs/jquery/dist/jquery.min.js"></script>
-      <script type="text/javascript" src="http://localhost:8001/scripts/index.js"></script>
+      <script type="text/javascript" src="http://localhost:8080/js/index.js"></script>
     {% else %}
-      <script type="text/javascript" src="http://localhost:8001/libs/jquery/dist/jquery.min.js"></script>
-      <script type="text/javascript" src="http://localhost:8001/scripts/index.js"></script>
+      <script type="text/javascript" src="http://localhost:8080/js/index.js"></script>
     {% endif %}
   </body>
 </html>

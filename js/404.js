@@ -1,8 +1,7 @@
 var inputReady = true;
 var input = $('.404-input');
 input.focus();
-$('.container').on('click',
-function(e) {
+$('.container').on('click', function(e) {
     input.focus();
 });
 

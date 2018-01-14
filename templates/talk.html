@@ -7,9 +7,9 @@
       <title>白昼之光</title>
       {% include "common/head.php" %}
       {% if env == 'develop' %}
-        <link href="http://localhost:8001/styles/talker.css" rel="stylesheet" />
+        <link href="http://localhost:8080/styles/talker.css" rel="stylesheet" />
       {% else %}
-        <link href="http://localhost:8001/styles/talker.css" rel="stylesheet" />
+        <link href="http://localhost:8080/styles/talker.css" rel="stylesheet" />
       {% endif %}
     </head>
     <body>
@@ -28,9 +28,9 @@
       </div>
       {% include "common/foot.php" %}
       {% if env == 'develop' %}
-        <script type="text/javascript" src="http://localhost:8001/scripts/talker.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/scripts/talker.js"></script>
       {% else %}
-        <script type="text/javascript" src="http://localhost:8001/scripts/talker.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/js/talker.js"></script>
       {% endif %}
     </body>
 </html>
