@@ -23,10 +23,7 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     index: './js/index.js',
-    statistics: './js/statistics.js',
-    talker: './js/talker.js',
-    '404': './js/404.js',
-    '500': './js/500.js',
+    talk: './js/talk.js',
   },
   output: {
     path: config.build.assetsRoot,

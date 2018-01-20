@@ -1,0 +1,84 @@
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #28ace8 0%, #92c7df 100%);
+  font-size: 14px;
+}
+
+.panel {
+  position: fixed;
+  top: 60px;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  width: 350px;
+  margin: 0 auto;
+  border: 8px solid rgba(255, 255, 255, 0.6);
+  border-radius: 1px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  .talk-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 48px;
+    margin: 0;
+    padding-bottom: 35px;
+    width: 100%;
+    background: linear-gradient(135deg, #8dbee0, #cbf1ff);
+    box-shadow: inset 0 0 3px #216da2;
+    overflow: auto;
+  }
+
+  .user-input-area {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    background: #fff;
+
+    .form-control {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: 0px;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      height: auto;
+    }
+  }
+
+  .msg-row {
+    margin-top: 25px;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .msg {
+      padding: 12px 20px;
+      box-shadow: 1px 1px 4px #39759e;
+
+      &.msg-me {
+        margin-left: 15px;
+        border-radius: 0 20px 20px 20px;
+        float: left;
+        background: #fff;
+      }
+
+      &.msg-user {
+        margin-right: 15px;
+        border-radius: 20px 20px 0 20px;
+        float: right;
+        background: #fff;
+      }
+    }
+  }
+}

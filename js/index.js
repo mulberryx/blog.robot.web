@@ -10,7 +10,7 @@ const isNight = date.getHours() >= 18 || date.getHours() <= 6;
 const field = isNight ? 'night_weather_code' : 'day_weather_code';
 
 $.ajax({
-  url: '/api/weather',
+  url: '/api/getWeather',
   type: 'get',
   contentType: 'application/json',
   data: {
@@ -25,5 +25,5 @@ $.ajax({
 });
 
 $('#goto-talk').click(() => {
-  window.location.href = '/talker'
+  window.location.href = '/talk'
 })
