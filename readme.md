@@ -1,8 +1,7 @@
-# blog robot web
+## blog robot web
+blog robot web site
 
-> blog robot web site
-
-## Build Setup
+### Build Setup
 
 ``` bash
 # install dependencies
