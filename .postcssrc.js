@@ -1,6 +1,6 @@
 /**
  * postcssrc configure
- * @author chenxiangyu
+ * @author Steudnera
  */
 
 module.exports = {
