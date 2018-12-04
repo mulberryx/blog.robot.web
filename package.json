@@ -2,7 +2,7 @@
   "name": "blog.root.web",
   "version": "0.0.1",
   "description": "blog root web project",
-  "author": "Mulberry <wowcxy2008@126.com>",
+  "author": "Philip <wowcxy2008@126.com>",
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
