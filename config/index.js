@@ -1,10 +1,16 @@
+/**
+ * 配置
+ * @author chenxiangyu
+ */
 'use strict'
 
 const path = require('path')
+const env_dev = require('./dev.env.js')
+const env_prod = require('./prod.env.js')
 
 module.exports = {
   dev: {
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     proxyTable: {},
     host: 'localhost',
@@ -18,15 +24,17 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     cacheBusting: true,
     cssSourceMap: true,
+    env: env_dev
   },
   build: {
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: true,
     devtool: '#source-map',
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
-    bundleAnalyzerReport: process.env.npm_config_report
+    bundleAnalyzerReport: process.env.npm_config_report,
+    env: env_prod
   }
 }
