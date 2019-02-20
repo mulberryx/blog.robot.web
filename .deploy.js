@@ -3,15 +3,14 @@
  * @author Philip
  */
 module.exports = {
-  name: 'portal',
+  name: 'robot',
   dist: 'dist',
   type: 'web',
   build: 'build/build.js',
-  project: 'portal',
   ali_oss: {
     accessKeyId: 'LTAI2PBQSdfLOUme',
     accessKeySecret: 'uMuFXEuK06PGTEmHRiFCvoCNtgx8nb',
-    bucket: 'raddeana-portal',
+    bucket: 'raddeana-robot',
     region: 'oss-cn-hangzhou'
   }
 }
