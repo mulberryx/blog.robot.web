@@ -33,13 +33,13 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'robot.html',
       template: 'src/html/robot.html',
-      chunks: ['common', 'robot'],
+      chunks: ['utils', 'vendor', 'robot'],
       xhtml: true
     }),
     new HtmlWebpackPlugin({
       filename: 'talk.html',
       template: 'src/html/talk.html',
-      chunks: ['common', 'talk'],
+      chunks: ['utils', 'vendor', 'talk'],
       xhtml: true
     }),
     new FriendlyErrorsPlugin()

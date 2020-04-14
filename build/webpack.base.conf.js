@@ -9,8 +9,8 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    'robot': './src/js/robot.js',
-    'talk': './src/js/talk.js'
+    robot: './src/js/robot.js',
+    talk: './src/js/talk.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -22,6 +22,31 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': resolve('src')
+    }
+  },
+  optimization: {
+    splitChunks: {
+      name: true,
+      chunks: 'all',
+      maxInitialRequests: 10,
+      cacheGroups: {
+        utils: {
+          name: 'utils',
+          chunks: 'all',
+          minChunks: 2,
+          priority: 9,
+          minSize: 0
+        },
+        vendor: {
+          name: 'vendor',
+          test: /node_modules/,
+          chunks: 'all',
+          priority: 10
+        }
+     }
+    },
+    runtimeChunk: {
+      name: 'runtime'
     }
   },
   module: {

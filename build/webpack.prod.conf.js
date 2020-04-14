@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ManifestPlugin = require('webpack-plugin-manifest')
 
 // 配置
@@ -31,10 +32,21 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   optimization: {
     minimize: true,
-    splitChunks: {
-      name: 'common',
-      chunks: 'all'
-    }
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          parallel: true,
+          mangle: false,
+          cache: false,
+          sourceMap: false,
+          extractComments: false,
+          output: {
+            comments: false,
+            beautify: true
+          }
+        }
+      })
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -67,7 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true
       },
-      chunks: ['common', 'robot'],
+      chunks: ['utils', 'vendor', 'robot'],
       xhtml: true
     }),
 
@@ -79,7 +91,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true
       },
-      chunks: ['common', 'talk'],
+      chunks: ['utils', 'vendor', 'talk'],
       xhtml: true
     }),
 
