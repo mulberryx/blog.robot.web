@@ -3,7 +3,7 @@
  * @author Philip
  */
 
-import '../less/index.less'
+import '../less/robot.less'
 import weatherCodes from './const/weatherCodes.js'
 
 const date = new Date()
