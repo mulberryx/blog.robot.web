@@ -79,7 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true
       },
-      chunks: ['utils', 'vendor', 'robot'],
+      chunks: ['runtime', 'utils', 'vendor', 'robot'],
       xhtml: true
     }),
 
@@ -91,7 +91,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true
       },
-      chunks: ['utils', 'vendor', 'talk'],
+      chunks: ['runtime', 'utils', 'vendor', 'talk'],
       xhtml: true
     }),
 
