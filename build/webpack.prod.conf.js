@@ -42,7 +42,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           extractComments: false,
           output: {
             comments: false,
-            beautify: true
+            beautify: false
           }
         }
       })
